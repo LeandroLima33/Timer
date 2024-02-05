@@ -2,6 +2,7 @@
 
 # Timer - Em quanto tempo deseja desligar o sistema?
 # Autor: Leandro F B Lima
+# Email: leandrofbl35@gmail.com
 # Manutenção: Leandro F B Lima
 
 
