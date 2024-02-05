@@ -18,9 +18,12 @@
 # --------------------------CHANGELOG------------------------- #
 
 # HISTÓRICO DE ATUALIZAÇÕES DO PROJETO
-#   V 1.0 04/02/2024, LeandroF B LIMA:
-#       -Variavel de tempo e comando adicionados
-#   
+    # V 1.0 04/02/2024, Leandro F B LIMA:
+    #   -Variavel de tempo e comando adicionados
+
+    # V 1.0 05/02/2024, Leandro F B Lima:
+    #   -Alerta sobre aviso de tempo
+    #    não adicionado 
 
 
 # --------------------------TESTES------------------------- #
@@ -32,12 +35,17 @@
 # --------------------------VARIAVEIS------------------------- #
 
 TEMPO=$1
-COMANDO=$(shutdown -h $TEMPO)
 
 
 # --------------------------EXECUÇÃO------------------------- #
 
-echo "$COMANDO"
-echo "O Sistema será desligado em "$TEMPO" minutos"
+echo "$INICIO"
+if [ "$TEMPO" ]; then
+    echo "$(basename $0)"
+    $(shutdown -h "$TEMPO")
+else
+    echo "$(basename $0) - Timer "
+    echo "Nenhum tempo foi digitado"
+fi
 
 
