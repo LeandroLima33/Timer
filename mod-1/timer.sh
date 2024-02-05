@@ -10,6 +10,8 @@
 # Script simples usado para desligar o sistema, de
 # acordo com o tempo em minutos definido pelo 
 # usuário
+#   Exemplo de uso:
+#   -/timer.sh 10
 
 
 # --------------------------CHANGELOG------------------------- #
