@@ -39,7 +39,7 @@ TEMPO=$1
 
 # --------------------------EXECUÇÃO------------------------- #
 
-echo "$INICIO"
+
 if [ "$TEMPO" ]; then
     echo "$(basename $0)"
     $(shutdown -h "$TEMPO")
