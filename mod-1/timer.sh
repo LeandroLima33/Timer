@@ -25,6 +25,10 @@
     #   -Alerta sobre aviso de tempo
     #    não adicionado 
 
+    # V 1.0 06/02/2024, Leandro F B Lima:
+    #   -Variáveis retiradas e definição
+    #   do tempo pelo usuário adicionada 
+
 
 # --------------------------TESTES------------------------- #
 
@@ -32,20 +36,23 @@
 #   Bash 5.2.15
 
 
-# --------------------------VARIAVEIS------------------------- #
-
-TEMPO=$1
 
 
 # --------------------------EXECUÇÃO------------------------- #
 
+read -p "Digite em minutos, em quanto tempo gostaria de desligar o sistema: " tempo
 
-if [ "$TEMPO" ]; then
-    echo "$(basename $0)"
-    $(shutdown -h "$TEMPO")
-else
-    echo "$(basename $0) - Timer "
-    echo "Nenhum tempo foi digitado"
+if [ $tempo ]; then
+    $(shutdown -h $tempo)
+    echo "O sistema será desligado em $tempo minutos"
 fi
+
+
+
+
+
+
+
+
 
 
